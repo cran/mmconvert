@@ -1,3 +1,9 @@
+## mmconvert 0.10 (2023-04-25)
+
+- Omit X chr positions if `input_type` is `"ave_cM"` or `"male_cM"`
+  (Issue #9)
+
+
 ## mmconvert 0.8 (2023-03-29)
 
 - Small changes for CRAN submission.

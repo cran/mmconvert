@@ -2,6 +2,7 @@
 
 [![R-CMD-check](https://github.com/rqtl/mmconvert/workflows/R-CMD-check/badge.svg)](https://github.com/rqtl/mmconvert/actions)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/mmconvert)](https://cran.r-project.org/package=mmconvert)
+[![zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5565363.svg)](https://doi.org/10.5281/zenodo.5565363)
 
 [Karl Broman](https://kbroman.org)
 
@@ -18,7 +19,11 @@ the Jackson Lab.
 
 ### Installation
 
-Install the mmconvert package from
+Install the package from
+[CRAN](https://cran.r-project.org/package=mmconvert) with
+`install.packages("mmconvert")`.
+
+Alternatively, install the mmconvert package from
 [GitHub](https://github.com/rqtl/mmconvert) using the
 [remotes package](https://remotes.r-lib.org):
 
@@ -34,10 +39,10 @@ Install the mmconvert package from
 
 #### `mmconvert()`
 
-`mmconvert()` takes a set of positions as input, plus and
+`mmconvert()` takes a set of positions as input, plus an
 indication of whether they are basepairs or Mbp (in build 39) or
-sex-averaged, female, or male cM (from the [revised Cox genetic
-map](https://github.com/kbroman/CoxMapV3)).
+sex-averaged, female, or male cM from a slightly smoothed version of the [revised Cox genetic
+map](https://github.com/kbroman/CoxMapV3).
 
 The input positions can be character strings like `"chr:position"`.
 
@@ -64,7 +69,7 @@ input_df <- data.frame(chr=c(14,14,14),
                marker=c("rs13482072", "rs13482231", "gnf14.117.278"))
 ```
 
-For either of these cases, the output is a data frame with seven
+For any of these cases, the output is a data frame with seven
 columns: marker, chromosome, sex-averaged cM, female cM, male cM,
 basepairs, and mega-basepairs.
 
