@@ -1,3 +1,9 @@
+## mmconvert 0.12 (2025-05-13)
+
+- Fix problem with warning message in `mmconvert()`.
+  (Issue #10.)
+
+
 ## mmconvert 0.10 (2023-04-25)
 
 - Omit X chr positions if `input_type` is `"ave_cM"` or `"male_cM"`
