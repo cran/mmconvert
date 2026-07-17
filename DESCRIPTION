@@ -1,6 +1,6 @@
 Package: mmconvert
-Version: 0.12
-Date: 2025-05-13
+Version: 0.14
+Date: 2026-07-17
 Title: Mouse Map Converter
 Description: Convert mouse genome positions between the build 39 physical map and the genetic map of Cox et al. (2009) <doi:10.1534/genetics.109.105486>.
 Author: Karl W Broman [aut, cre] (ORCID:
@@ -18,8 +18,8 @@ LinkingTo: Rcpp
 LazyData: true
 Encoding: UTF-8
 ByteCompile: true
-RoxygenNote: 7.2.3
+Config/roxygen2/version: 8.0.0
 NeedsCompilation: yes
-Packaged: 2025-05-13 14:15:02 UTC; kbroman
+Packaged: 2026-07-17 11:00:30 UTC; kbroman
 Repository: CRAN
-Date/Publication: 2025-05-13 14:40:06 UTC
+Date/Publication: 2026-07-17 12:10:01 UTC

@@ -1,3 +1,8 @@
+## mmconvert 0.14 (2026-07-17)
+
+- Small change to tests to avoid Note on CRAN
+
+
 ## mmconvert 0.12 (2025-05-13)
 
 - Fix problem with warning message in `mmconvert()`.

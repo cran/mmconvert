@@ -8,10 +8,9 @@
 #' - Source at <https://github.com/rqtl/mmconvert>
 #' - BugReports to <https://github.com/rqtl/mmconvert/issues>
 #'
-#' @docType package
 #' @name mmconvert-package
 #'
 #' @keywords internal
 #' @importFrom Rcpp sourceCpp
 #' @useDynLib mmconvert, .registration=TRUE
-NULL
+"_PACKAGE"

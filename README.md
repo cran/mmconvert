@@ -2,9 +2,8 @@
 
 [![R-CMD-check](https://github.com/rqtl/mmconvert/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rqtl/mmconvert/actions/workflows/R-CMD-check.yaml)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/mmconvert)](https://cran.r-project.org/package=mmconvert)
+[![r-universe badge](https://rqtl.r-universe.dev/mmconvert/badges/version)](https://rqtl.r-universe.dev/mmconvert)
 [![zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5565363.svg)](https://doi.org/10.5281/zenodo.5565363)
-
-[Karl Broman](https://kbroman.org)
 
 R package to convert mouse genome positions between build 39 physical locations and
 the [Cox genetic map](https://doi.org/10.1534/genetics.109.105486) positions.
@@ -21,14 +20,28 @@ the Jackson Lab.
 
 Install the package from
 [CRAN](https://cran.r-project.org/package=mmconvert) with
-`install.packages("mmconvert")`.
 
-Alternatively, install the mmconvert package from
-[GitHub](https://github.com/rqtl/mmconvert) using the
-[remotes package](https://remotes.r-lib.org):
 
-    install.packages("remotes")
-    remotes::install_github("rqtl/mmconvert")
+``` r
+install.packages("mmconvert")
+```
+
+Alternatively, install it from [R
+universe](https://rqtl.r-universe.dev):
+
+
+``` r
+install.packages("mmconvert", repos=c("https://rqtl.r-universe.dev",
+                                      "https://cloud.r-project.org"))
+```
+
+Or use [remotes](https://remotes.r-lib.org) to install it from its GitHub source:
+
+
+``` r
+install.packages("remotes")
+remotes::install_github("rqtl/mmconvert")
+```
 
 ---
 
@@ -47,14 +60,14 @@ map](https://github.com/kbroman/CoxMapV3).
 The input positions can be character strings like `"chr:position"`.
 
 
-```r
+``` r
 input_char <- c(rs13482072="14:6738536", rs13482231="14:67215850", gnf14.117.278="14:121955310")
 ```
 
 Or they can be a list of marker positions, separated by chromosome.
 
 
-```r
+``` r
 input_list <- list("14"=c(rs13482072=6738536, rs13482231=67215850, gnf14.117.278=121955310))
 ```
 
@@ -63,7 +76,7 @@ and positions as the second column. Marker names can either be in a
 third column or included as row names.
 
 
-```r
+``` r
 input_df <- data.frame(chr=c(14,14,14),
                pos=c(6738536, 67215850, 121955310),
                marker=c("rs13482072", "rs13482231", "gnf14.117.278"))
@@ -74,7 +87,7 @@ columns: marker, chromosome, sex-averaged cM, female cM, male cM,
 basepairs, and mega-basepairs.
 
 
-```r
+``` r
 library(mmconvert)
 mmconvert(input_df)
 ```
@@ -90,7 +103,7 @@ If you want to give the input positions in Mbp rather than basepairs,
 use the argument `input_type="Mbp"`.
 
 
-```r
+``` r
 input_df$pos <- input_df$pos / 1e6
 mmconvert(input_df, input_type="Mbp")
 ```
@@ -119,7 +132,7 @@ MUGA array annotations and <https://github.com/kbroman/CoxMapV3> for
 the revised Cox genetic map.
 
 
-```r
+``` r
 file <- paste0("https://raw.githubusercontent.com/rqtl/",
                "qtl2data/main/DOex/DOex.zip")
 

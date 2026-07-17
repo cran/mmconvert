@@ -17,4 +17,21 @@ physical map and the Cox genetic map
 }
 }
 
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/rqtl/mmconvert}
+  \item Report bugs at \url{https://github.com/rqtl/mmconvert/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Karl W Broman \email{broman@wisc.edu} (\href{https://orcid.org/0000-0002-4914-6671}{ORCID})
+
+Authors:
+\itemize{
+  \item Karl W Broman \email{broman@wisc.edu} (\href{https://orcid.org/0000-0002-4914-6671}{ORCID})
+}
+
+}
 \keyword{internal}
